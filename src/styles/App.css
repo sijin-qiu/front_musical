@@ -1,0 +1,35 @@
+/* 主应用组件样式 */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 70px; /* 为固定导航栏留出空间 */
+  min-height: calc(100vh - 70px - 60px); /* 减去导航栏和页脚高度 */
+}
+
+/* 页脚样式 */
+.footer {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.footer p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 60px; /* 移动端导航栏可能稍高 */
+  }
+}

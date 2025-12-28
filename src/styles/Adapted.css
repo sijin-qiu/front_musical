@@ -1,0 +1,550 @@
+/* 已影视化页面样式 */
+
+/* 页面头部样式 - 黑金高级主题 */
+.page-header {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  color: #ffd700;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 筛选区域样式 */
+.filters-section {
+  padding: 40px 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.filters-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  border: 2px solid #e1e5e9;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #666;
+}
+
+.sort-selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-selector label {
+  font-weight: 500;
+  color: #333;
+}
+
+.sort-select {
+  padding: 10px 15px;
+  border: 2px solid #e1e5e9;
+  border-radius: 10px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: #ffd700;
+}
+
+.stats-info {
+  color: #666;
+  font-size: 14px;
+}
+
+/* 主要内容区域 */
+.main-content {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #ffffff;
+}
+
+.musicals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 30px;
+}
+
+/* 音乐剧卡片样式 */
+.musical-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.musical-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 215, 0, 0.3);
+}
+
+.card-image {
+  position: relative;
+  /* 使用统一的宽高比 2:3 */
+  aspect-ratio: 2/3;
+  max-height: 500px;
+  overflow: hidden;
+  background: #0a0a0a;
+  border-radius: 16px 16px 0 0;
+  display: grid;
+  place-items: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.3s ease;
+  loading: lazy;
+  background: #f8f8f8;
+}
+
+.card-image:hover img {
+  transform: scale(1.05);
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffd700;
+  text-align: center;
+  background: #0a0a0a;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.image-placeholder p {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card-image:hover .card-overlay {
+  opacity: 1;
+}
+
+.view-details-btn {
+  padding: 12px 30px;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-details-btn:hover {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.musical-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffd700;
+  margin-bottom: 5px;
+}
+
+.musical-original {
+  color: #cccccc;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.musical-meta {
+  margin-bottom: 20px;
+}
+
+.meta-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.meta-label {
+  color: #999999;
+}
+
+.meta-value {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.meta-value.highlight {
+  color: #ffd700;
+  font-weight: 700;
+}
+
+.musical-description {
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.card-actions {
+  text-align: center;
+}
+
+.btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #333333;
+  border: 1px solid #dddddd;
+}
+
+.btn-secondary:hover {
+  background: #e1e5e9;
+  border-color: #cccccc;
+}
+
+/* 模态框样式 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+  padding: 30px 30px 20px;
+  border-bottom: 1px solid #e1e5e9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0a0a0a;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #666666;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 215, 0, 0.1);
+  color: #0a0a0a;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+.modal-image {
+  margin-bottom: 30px;
+}
+
+.image-placeholder.large {
+  height: 300px;
+  font-size: 1.5rem;
+}
+
+.image-placeholder.large .placeholder-icon {
+  font-size: 4rem;
+}
+
+.modal-info h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+.modal-info h3:first-child {
+  margin-top: 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.info-item {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border-left: 4px solid #ffd700;
+}
+
+.description {
+  line-height: 1.8;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee;
+  position: relative;
+  padding-left: 25px;
+  color: #333333;
+}
+
+.achievements li::before {
+  content: '🏆';
+  position: absolute;
+  left: 0;
+}
+
+.achievements li:last-child {
+  border-bottom: none;
+}
+
+.modal-footer {
+  padding: 20px 30px;
+  border-top: 1px solid #eeeeee;
+  text-align: center;
+}
+
+.modal-footer-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #333333;
+  border: 1px solid #dddddd;
+}
+
+.btn-secondary:hover {
+  background: #e1e5e9;
+  border-color: #cccccc;
+}
+
+.btn-video {
+  background: linear-gradient(45deg, #2a2a2a, #3a3a3a);
+  color: #ffd700;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.btn-video:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(255, 215, 0, 0.2);
+  border-color: rgba(255, 215, 0, 0.5);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .filters-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  
+  .search-box {
+    min-width: auto;
+  }
+  
+  .musicals-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card-image {
+    aspect-ratio: 2/3;
+    max-height: 350px;
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .modal-overlay {
+    padding: 10px;
+  }
+  
+  .modal-header {
+    padding: 20px 20px 15px;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-image .image-card-container {
+    aspect-ratio: 2/3;
+    max-height: 400px;
+    border-radius: 15px;
+  }
+  
+  .modal-image .image-card-img {
+    border-radius: 15px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header {
+    padding: 40px 0;
+  }
+  
+  .filters-section {
+    padding: 30px 0;
+  }
+  
+  .main-content {
+    padding: 40px 0;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+}
