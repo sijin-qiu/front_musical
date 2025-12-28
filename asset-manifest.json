@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sijin-qiu/front_musical/static/css/main.04b7b51d.css",
+    "main.js": "/sijin-qiu/front_musical/static/js/main.069ebe65.js",
+    "index.html": "/sijin-qiu/front_musical/index.html",
+    "main.04b7b51d.css.map": "/sijin-qiu/front_musical/static/css/main.04b7b51d.css.map",
+    "main.069ebe65.js.map": "/sijin-qiu/front_musical/static/js/main.069ebe65.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04b7b51d.css",
+    "static/js/main.069ebe65.js"
+  ]
+}
